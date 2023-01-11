@@ -2,10 +2,16 @@
     grid-area: nav;
     background-color: #65A6D1;
     border-radius: 2px;
+    padding: 20px;
     /* margin-top: 4px; */
     grid-area: nav;
     height: 500px;
-    
-    
 }
 
+.nav_menu a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+.active{
+  color: red!important;
+}
