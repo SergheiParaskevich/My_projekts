@@ -1,0 +1,18 @@
+button{
+    margin-left: 10px;
+}
+ul{
+    margin: 0;
+}
+body{
+    display: flex;
+    padding: 0px;
+}
+
+li{
+    display: flex;
+    justify-content: flex-start;
+}
+ul{
+    padding: 0;
+}
