@@ -1,11 +1,15 @@
 import React from "react";
 import { useState } from "react";
 
-export default function PizzaBlock({title, price}) {
- 
-  const [pizzaCount, setPizzaCount] = useState(0);
+export default function PizzaBlock({title, price, imageUrl, sizes, types}) {
 
-  const onClickAdd = () => setPizzaCount(pizzaCount + 1)
+  const typeNAmes = ['тонкое', 'традиционное'];
+
+  
+ 
+  // const [pizzaCount, setPizzaCount] = useState(0);
+
+  // const onClickAdd = () => setPizzaCount(pizzaCount + 1)
     
   
 
@@ -14,24 +18,22 @@ export default function PizzaBlock({title, price}) {
       <div className="pizza-block">
         <img
           className="pizza-block__image"
-          src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+          src={imageUrl}
           alt="Pizza"
         />
         <h4 className="pizza-block__title">{title}</h4>
         <div className="pizza-block__selector">
           <ul>
-            <li className="active">тонкое</li>
-            <li>традиционное</li>
+            {types.map((e) => (<li>{typeNAmes[e]}</li>))}
+           
           </ul>
           <ul>
-            <li className="active">26 см.</li>
-            <li>30 см.</li>
-            <li>40 см.</li>
+           {sizes.map( elem => (<li>{elem} cm.</li>))}
           </ul>
         </div>
         <div className="pizza-block__bottom">
           <button className="pizza-block__price">от {price} ₽</button>
-          <button onClick={onClickAdd} className="button button--outline button--add">
+          <button  className="button button--outline button--add">
             <svg
               width="12"
               height="12"
@@ -45,7 +47,7 @@ export default function PizzaBlock({title, price}) {
               />
             </svg>
             <span>Добавить</span>
-            <i>{pizzaCount}</i>
+            <i>0</i>
           </button>
         </div>
       </div>
