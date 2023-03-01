@@ -1,0 +1,11 @@
+.set_counter_wrapper{
+    
+        display: flex;
+        justify-content: center;
+        width: 250px;
+        height: 200px;
+        border: solid salmon 3px;
+        border-radius: 3px;
+        margin-right: 50px;
+    
+}

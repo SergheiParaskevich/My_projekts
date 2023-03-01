@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 200px;
+    border: solid salmon 3px;
+    border-radius: 3px;
+}
+
+.display_counter {
+    
+    font-size: 70px;
+    
+    border: solid salmon 3px;
+}
+
+.btn_section {
+    width: 200px;
+    height: 20px;
+    border: solid salmon 3px;
+}
+
+.max_number {
+    font-size: 70px;
+    border: solid salmon 3px;
+    color: red;
+}
